@@ -1,0 +1,12 @@
+*.pdf
+*.h
+*.o
+*.a
+*.exe
+*.sb
+*.mp3
+*.png
+*.webp
+*.jpg
+*.sb3
+/Semana 1/*.c 
