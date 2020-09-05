@@ -43,13 +43,13 @@ main(int argc,string argv[])
       // porém o resto disso por 26 sempre será um numero
       // menor que 26, logo; 25 + k, então Z será A + k - 1 unidades;  
       p[i] = 65 + ((p[i] - 65 + k[l % g]) % 26);
-      l++;
       printf("%c", p[i]);
+      l++;
     }
-    else if( p[i] >= 97 && p[i] < 122 ) {
+    else if( p[i] >= 97 && p[i] < 123 ) {
       p[i] = 97 + ((p[i] - 97 + k[l % g]) % 26);
-      l++;
       printf("%c", p[i]);
+      l++;
     }
     else{
       printf("%c", p[i]);

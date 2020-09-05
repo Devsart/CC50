@@ -13,7 +13,7 @@ main(int argc,string argv[])
 { 
   // Aqui usa-se atoi para converter o input p/ int 
   int k = atoi(argv[1]);
-  if(k < 0 || k == false){
+  if(k < 0 || k == false || argv[2]){
     return 1;
   }
   printf("Digite a frase que deseja criptografar: ");
@@ -24,10 +24,7 @@ main(int argc,string argv[])
   // transformá-la e printar a transformação...
   for (int i = 0, n = strlen(p); i < n; i++)
   {
-    if(p[i] == ' '){
-      printf("%c", p[i]);
-    }
-    else if(p[i] < 91){
+    if( p[i] < 91 && p[i] >= 65 ){
       // lógica, se for "A"; 65 - 65 + k entao A 
       // avançará k unidades... Se for Z, 90 - 65 + k
       // porém o resto disso por 26 sempre será um numero
@@ -35,8 +32,11 @@ main(int argc,string argv[])
       p[i] = 65 + ((p[i] - 65 + k) % 26);
       printf("%c", p[i]);
     }
-    else{
+    else if( p[i] >= 97 && p[i] < 123 ) {
       p[i] = 97 + ((p[i] - 97 + k) % 26);
+      printf("%c", p[i]);
+    }
+    else{
       printf("%c", p[i]);
     }
   }
