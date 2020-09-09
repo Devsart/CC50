@@ -10,3 +10,5 @@
 *.jpg
 *.sb3
 /week1/*.c 
+*.txt
+*Makefile
